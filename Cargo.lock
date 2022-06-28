@@ -2517,9 +2517,7 @@ name = "nu-cli"
 version = "0.64.1"
 dependencies = [
  "chrono",
- "crossterm",
  "fuzzy-matcher",
- "is_executable",
  "log",
  "miette 5.1.0",
  "nu-ansi-term",
@@ -2531,7 +2529,6 @@ dependencies = [
  "nu-protocol",
  "nu-test-support",
  "nu-utils",
- "reedline",
  "sysinfo 0.24.1",
  "thiserror",
 ]
