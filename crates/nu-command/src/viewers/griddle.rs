@@ -247,7 +247,7 @@ fn create_grid_output(
                     };
 
                     let ansi_style = ls_colors_style
-                        .map(Style::to_crossterm_style)
+                        // .map(Style::to_crossterm_style)
                         .unwrap_or_default();
 
                     let item = format!("{} {}", icon_style.apply(icon), ansi_style.apply(value));
@@ -257,7 +257,7 @@ fn create_grid_output(
                     grid.add(cell);
                 } else {
                     let style = ls_colors.style_for_path(value.clone());
-                    let ansi_style = style.map(Style::to_crossterm_style).unwrap_or_default();
+                    let ansi_style = style/*.map(Style::to_crossterm_style)*/.unwrap_or_default();
                     let mut cell = Cell::from(ansi_style.apply(value).to_string());
                     cell.alignment = Alignment::Left;
                     grid.add(cell);

@@ -1,4 +1,9 @@
-use is_root::is_root;
+// #[cfg(not(target_arch = "wasm32-unknown-unknown"))]
+// use is_root::is_root;
+// #[cfg(target_arch = "wasm32-unknown-unknown")]
+fn is_root() -> bool {
+    false
+}
 use nu_protocol::ast::Call;
 use nu_protocol::engine::{Command, EngineState, Stack};
 use nu_protocol::{Category, Example, IntoPipelineData, PipelineData, Signature, Span, Value};

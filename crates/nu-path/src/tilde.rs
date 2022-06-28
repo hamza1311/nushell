@@ -89,6 +89,11 @@ fn user_home_dir(username: &str) -> PathBuf {
     }
 }
 
+#[cfg(target_os = "wasi")]
+fn user_home_dir(username: &str) -> PathBuf {
+    PathBuf::new()
+}
+
 #[cfg(target_os = "windows")]
 fn user_home_dir(username: &str) -> PathBuf {
     match dirs_next::home_dir() {

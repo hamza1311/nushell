@@ -132,7 +132,7 @@ pub fn create_default_context(cwd: impl AsRef<Path>) -> EngineState {
             Zip,
         };
 
-        // Misc
+/*        // Misc
         bind_command! {
             History,
             Tutor,
@@ -162,7 +162,7 @@ pub fn create_default_context(cwd: impl AsRef<Path>) -> EngineState {
             Ps,
             Sys,
         };
-
+*/
         #[cfg(feature = "which-support")]
         bind_command! { Which };
 
@@ -207,7 +207,7 @@ pub fn create_default_context(cwd: impl AsRef<Path>) -> EngineState {
             StrUpcase
         };
 
-        // FileSystem
+        /*// FileSystem
         bind_command! {
             Cd,
             Cp,
@@ -237,7 +237,7 @@ pub fn create_default_context(cwd: impl AsRef<Path>) -> EngineState {
             KeybindingsList,
             Sleep,
             TermSize,
-        };
+        };*/
 
         // Date
         bind_command! {
@@ -251,7 +251,7 @@ pub fn create_default_context(cwd: impl AsRef<Path>) -> EngineState {
             DateToTimezone,
         };
 
-        // Shells
+        /*// Shells
         bind_command! {
             Enter,
             Exit,
@@ -259,7 +259,7 @@ pub fn create_default_context(cwd: impl AsRef<Path>) -> EngineState {
             NextShell,
             PrevShell,
             Shells,
-        };
+        };*/
 
         // Formats
         bind_command! {
@@ -290,7 +290,7 @@ pub fn create_default_context(cwd: impl AsRef<Path>) -> EngineState {
             ToToml,
             ToTsv,
             ToCsv,
-            Touch,
+            // Touch,
             Use,
             Upsert,
             Where,
@@ -301,7 +301,7 @@ pub fn create_default_context(cwd: impl AsRef<Path>) -> EngineState {
 
         // Viewers
         bind_command! {
-            Griddle,
+            // Griddle,
             Table,
         };
 
@@ -319,7 +319,7 @@ pub fn create_default_context(cwd: impl AsRef<Path>) -> EngineState {
             IntoString,
         };
 
-        // Env
+        /*// Env
         bind_command! {
             Env,
             LetEnv,
@@ -328,7 +328,7 @@ pub fn create_default_context(cwd: impl AsRef<Path>) -> EngineState {
             ConfigNu,
             ConfigEnv,
             ConfigMeta,
-        };
+        };*/
 
         // Math
         bind_command! {
@@ -350,7 +350,7 @@ pub fn create_default_context(cwd: impl AsRef<Path>) -> EngineState {
             MathVariance,
         };
 
-        // Network
+        /*// Network
         bind_command! {
             Fetch,
             Post,
@@ -360,7 +360,7 @@ pub fn create_default_context(cwd: impl AsRef<Path>) -> EngineState {
             UrlQuery,
             UrlScheme,
             Port,
-        }
+        }*/
 
         // Random
         bind_command! {
@@ -386,9 +386,9 @@ pub fn create_default_context(cwd: impl AsRef<Path>) -> EngineState {
             Hash,
             HashMd5::default(),
             HashSha256::default(),
-            HashBase64,
+            // HashBase64,
         };
-
+/*
         // Experimental
         bind_command! {
             ViewSource,
@@ -408,7 +408,7 @@ pub fn create_default_context(cwd: impl AsRef<Path>) -> EngineState {
             KeepDeprecated,
             KeepUntilDeprecated,
             KeepWhileDeprecated,
-        };
+        };*/
 
         #[cfg(feature = "plugin")]
         bind_command!(Register);

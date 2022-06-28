@@ -274,37 +274,38 @@ fn handle_row_stream(
                                 if let Some(Value::String { val: path, span }) = vals.get(idx) {
                                     match std::fs::symlink_metadata(&path) {
                                         Ok(metadata) => {
-                                            let style = ls_colors.style_for_path_with_metadata(
-                                                path.clone(),
-                                                Some(&metadata),
-                                            );
-                                            let ansi_style = style
-                                                .map(Style::to_crossterm_style)
+                                            // let style = ls_colors.style_for_path_with_metadata(
+                                            //     path.clone(),
+                                            //     Some(&metadata),
+                                            // );
+                                            // let ansi_style = style
+                                                // .map(Style::to_crossterm_style)
                                                 // .map(ToNuAnsiStyle::to_nu_ansi_style)
-                                                .unwrap_or_default();
-                                            let use_ls_colors = config.use_ls_colors;
+                                                // .unwrap_or_default();
 
-                                            if use_ls_colors {
-                                                vals[idx] = Value::String {
-                                                    val: ansi_style.apply(path).to_string(),
-                                                    span: *span,
-                                                };
-                                            }
+                                            // let use_ls_colors = config.use_ls_colors;
+                                            //
+                                            // if use_ls_colors {
+                                            //     vals[idx] = Value::String {
+                                            //         val: ansi_style.apply(path).to_string(),
+                                            //         span: *span,
+                                            //     };
+                                            // }
                                         }
                                         Err(_) => {
-                                            let style = ls_colors.style_for_path(path.clone());
-                                            let ansi_style = style
-                                                .map(Style::to_crossterm_style)
+                                            // let style = ls_colors.style_for_path(path.clone());
+                                            // let ansi_style = style
+                                                // .map(Style::to_crossterm_style)
                                                 // .map(ToNuAnsiStyle::to_nu_ansi_style)
-                                                .unwrap_or_default();
-                                            let use_ls_colors = config.use_ls_colors;
-
-                                            if use_ls_colors {
-                                                vals[idx] = Value::String {
-                                                    val: ansi_style.apply(path).to_string(),
-                                                    span: *span,
-                                                };
-                                            }
+                                                // .unwrap_or_default();
+                                            // let use_ls_colors = config.use_ls_colors;
+                                            //
+                                            // if use_ls_colors {
+                                            //     vals[idx] = Value::String {
+                                            //         val: ansi_style.apply(path).to_string(),
+                                            //         span: *span,
+                                            //     };
+                                            // }
                                         }
                                     }
                                 }

@@ -15,7 +15,7 @@ nu-engine = { path = "../nu-engine", version = "0.64.1"  }
 nu-glob = { path = "../nu-glob", version = "0.64.1" }
 nu-json = { path = "../nu-json", version = "0.64.1"  }
 nu-parser = { path = "../nu-parser", version = "0.64.1"  }
-nu-path = { path = "../nu-path", version = "0.64.1"  }
+#nu-path = { path = "../nu-path", version = "0.64.1"  }
 nu-pretty-hex = { path = "../nu-pretty-hex", version = "0.64.1"  }
 nu-protocol = { path = "../nu-protocol", version = "0.64.1"  }
 nu-system = { path = "../nu-system", version = "0.64.1"  }
@@ -33,7 +33,7 @@ calamine = "0.18.0"
 chrono = { version = "0.4.19", features = ["serde"] }
 chrono-humanize = "0.2.1"
 chrono-tz = "0.6.1"
-crossterm = "0.23.0"
+#crossterm = "0.23.0"
 csv = "1.1.6"
 dialoguer = "0.9.0"
 digest = "0.10.0"
@@ -47,11 +47,11 @@ htmlescape = "0.3.1"
 ical = "0.7.0"
 indexmap = { version="1.7", features=["serde-1"] }
 Inflector = "0.11"
-is-root = "0.1.2"
+#is-root = "0.1.2"
 itertools = "0.10.0"
 lazy_static = "1.4.0"
 log = "0.4.14"
-lscolors = { version = "0.9.0", features = ["crossterm"]}
+lscolors = { version = "0.9.0", features = []}
 md5 = { package = "md-5", version = "0.10.0" }
 meval = "0.2.0"
 mime = "0.3.16"
@@ -83,7 +83,7 @@ unicode-segmentation = "1.8.0"
 url = "2.2.1"
 uuid = { version = "0.8.2", features = ["v4"] }
 which = { version = "4.2.2", optional = true }
-reedline = { version = "0.7.0", features = ["bashisms", "sqlite"]}
+#reedline = { version = "0.7.0", features = ["bashisms", "sqlite"]}
 wax = { version =  "0.4.0", features = ["diagnostics"] }
 rusqlite = { version = "0.27.0", features = ["bundled"], optional = true }
 sqlparser = { version = "0.16.0", features = ["serde"], optional = true }
